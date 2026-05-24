@@ -4,7 +4,7 @@ Planet Explorer is a React-based web application that allows users to explore pl
 
 Live Demo
 
-[View Live Project](https://your-vercel-link.vercel.app)
+[View Live Project](https://planet-x-alpha.vercel.app/)
 
 ---
 
@@ -55,7 +55,7 @@ Contributions
 Clone the repository:
 
 bash
-git clone https://github.com/your-group/project-name.git
+https://github.com/Ezichi-D/novara-space-app.git
 ```
 
 Navigate into the project folder:
