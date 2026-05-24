@@ -1,0 +1,44 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #07152d 40%, #0b2b63);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  height: 45px;
+}
+
+.nav-brand-text {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-right: 0;
+  margin-left: -25px;
+  margin-top: 5px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding-right: 30px;
+}
