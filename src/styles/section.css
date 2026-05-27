@@ -156,6 +156,10 @@
   gap: 25px;
 }
 
+.planet-card {
+  text-align: center;
+}
+
 /* ================= TABLE ================= */
 
 table {
