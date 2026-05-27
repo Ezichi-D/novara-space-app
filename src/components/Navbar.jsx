@@ -11,7 +11,6 @@ function Navbar() {
             alt="logo"
           />
         </a>
-        <a href="/" className="nav-brand-text">X</a>
       </div>
 
       <div>
