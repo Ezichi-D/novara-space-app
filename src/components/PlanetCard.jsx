@@ -54,11 +54,12 @@ function PlanetCard({ planet }) {
       <h3>{planetName}</h3>
 
       <p>
-        <strong>Distance from Sun:</strong>{" "}
+        <strong>
         {planet?.distance_from_sun ||
           planet?.distanceFromSun ||
           planet?.distance ||
           "N/A"}
+          km from the Sun</strong>{" "}
       </p>
     </figure>
   );

@@ -1,3 +1,5 @@
+/* ================= HERO ================= */
+
 .hero {
   min-height: 100vh;
   background: linear-gradient(to right, #07152d 40%, #0b2b63);
@@ -10,7 +12,6 @@
   overflow: hidden;
 }
 
-/* glowing background effect */
 .hero::before {
   content: "";
   position: absolute;
@@ -24,7 +25,6 @@
   opacity: 0.7;
 }
 
-/* LEFT SIDE TEXT */
 .hero-text {
   position: relative;
   z-index: 2;
@@ -70,7 +70,6 @@
   transform: translateY(-3px);
 }
 
-/* RIGHT SIDE IMAGE */
 .hero-media {
   position: relative;
   z-index: 2;
@@ -86,33 +85,37 @@
   animation: float 4s ease-in-out infinite;
 }
 
-/* floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
 
-/* VIDEO BOX */
+/* ================= VIDEO ================= */
+
 .videoBox {
   background: #f3f4f6;
   color: black;
   border-radius: 20px;
   display: flex;
-  gap: 100px;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   padding: 40px;
 }
 
 .videoBox video {
-   width: 1000px;
+  width: 55%;
+  max-width: 650px;
   height: 320px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  
 }
 
+.videoText {
+  width: 45%;
+}
 
 .videoText h2 {
   margin-bottom: 20px;
@@ -127,10 +130,12 @@
   text-align: center;
 }
 
-/* PLANETS SECTION */
+/* ================= PLANETS ================= */
+
 #planets {
   background: #e5e7eb;
   color: black;
+  padding: 60px 10%;
 }
 
 #planets h1 {
@@ -151,63 +156,20 @@
   gap: 25px;
 }
 
-.planet-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
+/* ================= TABLE ================= */
 
-.planet-card:hover {
-  transform: translateY(-8px);
-}
-
-.planet-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.planet-card figcaption {
-  padding: 20px;
-}
-
-.planet-card h3 {
-  margin-bottom: 10px;
-  color: #1e3a8a;
-  text-align: center;
-}
-
-.planet-card p {
-  color: #1e3a8a;
-  text-align: center;
-}
-
-/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
   background: white;
   color: black;
   border-radius: 20px;
-  overflow: hidden;
+  overflow-x: auto;
+  display: block;
 }
 
-th {
-  background: #1d4ed8;
-  color: white;
-}
+/* ================= CONTACT ================= */
 
-th,
-td {
-  padding: 18px;
-  border: 1px solid #e2e8f0;
-  text-align: center;
-}
-
-/* FORM */
-/* FORM */
 #contact {
   background: #fff;
   padding: 60px 10%;
@@ -289,13 +251,8 @@ textarea {
   background: #1e40af;
 }
 
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* ================= FOOTER ================= */
 
-/* FOOTER */
 footer {
   background: #07152d;
   color: white;
@@ -303,7 +260,30 @@ footer {
   padding: 50px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
+/* tablet */
+@media (max-width: 1024px) {
+
+  .planet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .videoBox {
+    gap: 20px;
+  }
+
+  .videoBox video {
+    width: 50%;
+    height: 280px;
+  }
+
+  .videoText {
+    width: 50%;
+  }
+}
+
+/* mobile */
 @media (max-width: 768px) {
 
   .hero {
@@ -316,15 +296,40 @@ footer {
     font-size: 2.5rem;
   }
 
+  .hero-media img {
+    width: 300px;
+  }
+
   .videoBox {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .videoBox video,
+  .videoText {
+    width: 100%;
+  }
+
+  .videoBox video {
+    height: 220px;
   }
 
   .planet-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-media img {
-    width: 300px;
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons button {
+    margin-right: 0;
+    width: 100%;
   }
 }
